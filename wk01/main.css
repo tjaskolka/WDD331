@@ -13,7 +13,7 @@ body > div {
     margin: 0 auto;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
 body > div {
     flex-direction: row;
 }
@@ -30,11 +30,14 @@ img {
     vertical-align: middle;
 }
 
-
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Lora', serif;
+}
+
+h2 {
+    margin-bottom: 3rem;
 }
 
 a {
@@ -107,12 +110,12 @@ article {
 }
 
 figure {
-    max-width: 250px;
+    display: flex;
 }
 
 img {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 80%;
     min-width: 100px;
     height: auto;
     vertical-align: middle;
