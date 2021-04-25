@@ -7,12 +7,50 @@ body {
     margin: 0;
 }
 
+body > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+body > div {
+    flex-direction: row;
+}
+
+header {
+    flex: 0 0 190px;
+}
+
+img {
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+}
+
 h1, h2, h3 {
     font-family: 'Lora', serif;
 }
 
 a {
     text-decoration: none;
+}
+
+header a, header a:visited {
+    color: #faebd7;
+}
+
+h2 a, h2 a:visited {
+    color: black;
+}
+
+p a, p a:visited {
+    color: #6495ed;
 }
 
 a:hover {
@@ -23,11 +61,11 @@ header nav a:hover {
     color: white;
 }
 
-a:active {
-    color: #deb887;
+h2 a:hover {
+    color: #6495ed;
 }
 
-header nav a:active {
+h2 a:active, header a:active, p a:active, header nav a:active {
     color: #deb887;
 }
 
@@ -35,10 +73,6 @@ header {
     background-color: #6495ed;
     text-align: right;
     padding: 2rem;
-}
-
-header a{
-    color: #faebd7;
 }
 
 hr {
@@ -63,24 +97,23 @@ li {
     line-height: 2rem;
 }
 
-nav a:normal {
-    color: #faebd7;
-}
-
 article {
     margin: 2.5rem auto;
     background-color: white;
     width: 70%;
+    max-width: 650px;
     box-shadow: 4px 4px 4px #ccc;
     padding: 2rem;
 }
 
 figure {
-    border: 1px solid #ccc;
+    max-width: 250px;
 }
 
 img {
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
     min-width: 100px;
+    height: auto;
     vertical-align: middle;
 }
