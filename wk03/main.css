@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #faebd7;
+  margin: 0;
+}
+body > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+  body > div {
+    flex-direction: row;
+  }
+
+  header {
+    flex: 0 0 190px;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    min-width: 100px;
+    height: auto;
+    vertical-align: middle;
+  }
+}
+img {
+  max-width: 80%;
+  margin: 0 auto;
+  min-width: 100px;
+  height: auto;
+  vertical-align: middle;
+}
+
+header {
+  background-color: #6495ed;
+  text-align: right;
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+h1, h2 {
+  font-family: "Lora", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header a, header a:visited {
+  color: #faebd7;
+}
+
+h2 a, h2 a:visited {
+  color: black;
+}
+
+p a, p a:visited {
+  color: #6495ed;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header nav a:hover {
+  color: white;
+}
+
+h2 a:hover {
+  color: #6495ed;
+}
+
+h2 a:active, header a:active, p a:active, header nav a:active {
+  color: #deb887;
+}
+
+hr {
+  text-align: right;
+  margin-right: 0;
+}
+
+ul {
+  color: #faebd7;
+  list-style: none;
+  margin: 1rem 0 0;
+}
+
+main {
+  background-color: #faebd7;
+}
+
+li {
+  line-height: 2rem;
+}
+
+article {
+  margin: 2.5rem auto;
+  background-color: white;
+  width: 70%;
+  max-width: 650px;
+  box-shadow: 4px 4px 4px #ccc;
+  padding: 2rem;
+}
+
+figure {
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */

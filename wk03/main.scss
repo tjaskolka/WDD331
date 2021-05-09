@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+$backgrd-color: #faebd7;
+$lt-blue: #6495ed;
+$shadow: 4px 4px 4px #ccc;
+
+@mixin image($max-width: 100%) {
+    max-width: $max-width;
+    margin: 0 auto;
+    min-width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
-    background-color: #faebd7;
+    background-color: $backgrd-color;
     margin: 0;
-}
-
-body > div {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    > div {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -23,29 +34,26 @@ header {
 }
 
 img {
-    margin: 0 auto;
-    max-width: 100%;
-    min-width: 100px;
-    height: auto;
-    vertical-align: middle;
+    @include image();
 }
-
 }
 
 img {
-    margin: 0 auto;
-    max-width: 80%;
-    min-width: 100px;
-    height: auto;
-    vertical-align: middle;
+    @include image(80%);
 }
 
-h1, h2 {
-    font-family: 'Lora', serif;
+header {
+    background-color: $lt-blue;
+    text-align: right;
+    padding: 2rem;
 }
 
 h2 {
     margin-bottom: 3rem;
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
 }
 
 a {
@@ -53,7 +61,7 @@ a {
 }
 
 header a, header a:visited {
-    color: #faebd7;
+    color: $backgrd-color;
 }
 
 h2 a, h2 a:visited {
@@ -61,7 +69,7 @@ h2 a, h2 a:visited {
 }
 
 p a, p a:visited {
-    color: #6495ed;
+    color: $lt-blue;
 }
 
 a:hover {
@@ -73,18 +81,13 @@ header nav a:hover {
 }
 
 h2 a:hover {
-    color: #6495ed;
+    color: $lt-blue;
 }
 
 h2 a:active, header a:active, p a:active, header nav a:active {
     color: #deb887;
 }
 
-header {
-    background-color: #6495ed;
-    text-align: right;
-    padding: 2rem;
-}
 
 hr {
     text-align: right;
@@ -92,16 +95,13 @@ hr {
 }
 
 ul {
-    color: #faebd7;
+    color: $backgrd-color;
     list-style: none;
+    margin: 1rem 0 0;
 }
 
 main {
-    background-color: #faebd7;
-}
-
-ul {
-    margin: 1rem 0 0;
+    background-color: $backgrd-color;
 }
 
 li {
@@ -113,7 +113,7 @@ article {
     background-color: white;
     width: 70%;
     max-width: 650px;
-    box-shadow: 4px 4px 4px #ccc;
+    box-shadow: $shadow;
     padding: 2rem;
 }
 
