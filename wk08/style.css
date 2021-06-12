@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet');
+
+/* BASE */
+
+:root {
+  --primary-color: #161514; /* dark */
+  --secondary-color: #f7edce; /* beige */
+  
+  --accent1-color: #8c1e1e; /* red */
+  --accent2-color: #02500a; /* green */
+  --accent3-color: #d19405; /* gold */
+  
+  --paper1-color: #e5d7b2; /* light */
+  --paper2-color: #e3c071; /* medium */
+  --paper3-color: #bca05e; /* dark */
+  
+  --paper-font: 'Playfair Display', serif;
+  --table-font: 'Caesar Dressing', cursive;
+  --book-font: 'EB Garamond', serif;
+  --heading-font: 'Alex Brush', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("https://gdurl.com/XMJt");
+  background-size: 260% auto;
+  padding: 20px;
+}
+.page-wrapper {
+  width: 20em;
+  margin: 0 auto;
+}
+
+/* SECTION - header */
+
+h1 {
+  font-family: var(--heading-font);
+  color: var(--paper3-color);
+  font-size: 2.5em;
+}
+h2 {
+  font-family: var(--book-font);
+  color: var(--paper1-color);
+  font-size: 1.4em;
+  letter-spacing: .04em;
+  padding-top: .1em;
+}
+.summary {
+  font-family: var(--paper-font);
+  color: var(--paper1-color);
+  font-size: .8em;
+  letter-spacing: .05em;
+  width: 20em;
+  padding-top: .5em;
+}
+.summary a {
+  color: var(--accent2-color);
+}
+
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  height: 375px;
+  width: 275px;
+  background-image: radial-gradient(var(--paper1-color), var(--paper1-color), var(--paper2-color));
+  border-radius: 3px;
+  box-shadow: 1px 1px 3.5px var(--primary-color);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 6em;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.preamble {
+  margin-left: 3em;
+}
+.preamble h3, 
+.main h3,
+.design-selection h3,
+.design-archives h3,
+.zen-resources h3 {
+  padding-bottom: 10px;
+  font-size: .9em;
+}
+.preamble p,
+.main p,
+.design-selection p,
+.design-archives li,
+.design-selection li,
+.zen-resources li {
+  font-size: .7em;
+  padding-bottom: .4em;
+}
+.preamble h3, 
+.preamble p {
+  display: none;
+}
+
+/* DIV - main */
+
+.explanation {
+  margin-top: -16.3em;
+  margin-left: 5.5em;
+  background-color: var(--accent1-color);
+  background-image: none;
+}
+.participation {
+  margin-top: -22.5em;
+  margin-left: 0em;
+}
+.benefits {
+  position: absolute;
+  margin-top: -15em;
+  margin-left: 4em;
+  transform: rotate(13deg);
+}
+.requirements {
+  position: absolute;
+  margin-top: -12.8em;
+  margin-left: -.8em;
+  background-color: var(--accent1-color);
+  background-image: none;
+}
+
+footer {
+  position: absolute;
+  bottom: -43em;
+  padding-bottom: 1em;
+}
+footer a {
+  font-family: var(--table-font);
+  font-size: 1.1em;
+  color: var(--paper3-color);
+  margin-right: .3em;
+  text-decoration: none;
+}
+
+
+/* ASIDE - footer */
+
+.sidebar {
+  position: relative;
+  margin-bottom: 10em;
+}
+.sidebar li {
+  list-style: none;
+}
+.sidebar a {
+  color: var(--accent3-color);
+}
+
+.design-selection,
+.design-archives {
+  height: 375px;
+  width: 275px;
+  background-image: url("https://gdurl.com/0Dum");
+  background-size: 100% 100%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3.5px var(--primary-color);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.design-selection {
+  margin-top: 17em;
+  margin-left: 1em;
+}
+.design-archives {
+  position: absolute;
+  top: 5em;
+  left: 7em;
+  transform: rotate(15deg);
+}
+.zen-resources {
+  position: absolute;
+  top: 10em;
+  left: 8.5em;
+  transform: rotate(15deg);
+}
+
+
+.extra1 {
+  position: fixed;
+  bottom: 0;
+  right: 3em;
+  background-image: url("https://gdurl.com/fmGv");
+  background-size: 100%;
+  height: 25em;
+  width: 17em;
+}
+
+@media all and (min-width: 800px) {
+  body {
+    padding: 0;
+  }
+  .page-wrapper {
+    width: 100%;
+  }
+  .intro, .main, .sidebar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 10em 10em 10em 1fr;
+    grid-template-rows: 5.5em 5.5em 13em auto 5.5em;
+    padding: 20px;
+    overflow: hidden;
+  }
+  header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  .summary {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    margin-top: 2em;
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+    margin-left: 0;
+    position: relative;
+  }
+  .preamble {
+    overflow: visible;
+  }
+  
+  .summary :nth-child(2) {
+    position: absolute;
+    right: 6em;
+    top: 5em;
+    color: transparent;
+  }
+  .summary :nth-child(2) a {
+    color: var(--paper2-color);
+  }
+  .summary a:nth-child(2) {
+    position: absolute;
+    right: -3em;
+    top: 0;
+  }
+  .summary a {
+    text-decoration: none;
+  }
+  .preamble h3, 
+  .preamble p {
+    display: block;
+  }
+  .main p {
+    grid-row: 3 / 4;
+    grid-column: 4 / 6;
+  }
+  .benefits {
+    margin-left: 3.5em;
+    margin-top: 3.3em;
+  }
+  footer {
+    position: static;
+    grid-row: 5 / 6;
+    grid-column: 3 / 5;
+    align-self: end;
+  }
+ 
+
+  .sidebar .wrapper {
+    position: static;
+    margin: 0;
+    grid-row: 4 / 6;
+    grid-column: 1 / 3;
+  }
+  .design-selection {
+    margin: 0 0 0 0em;
+    transform: rotate(-13deg);
+  }
+  .design-archives {
+    transform: rotate(-5deg);
+    position: static;
+    margin-top: -16em;
+    margin-left: 1.7em;
+  }
+  .zen-resources {
+    transform: rotate(-5deg);
+    position: static;
+    margin-top: -13em;
+    margin-left: 3em;
+}
+}
+
+/* This is where my css code starts*/
+
+.preamble h3,
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
+  font-family: 'Playfair Display', serif;
+  background-image:url("https://images.unsplash.com/photo-1611242320536-f12d3541249b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHJlZCUyMHNhdGlufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  -webkit-background-clip:text;
+  -moz-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  opacity: .9;
+  text-transform: uppercase;
+}
+
+.preamble p,
+.explanation p,
+.participation p,
+.benefits p,
+.requirements p {
+  font-family: 'EB Garamond', serif;
+  max-width: 99%;
+  font-weight: bold;
+  font-style: italic;
+  text-align: justify;
+  opacity:0.9;
+  margin-bottom: 1em;
+}
+
+.requirements p:last-child {
+  font-size: .5em;
+}
+
+.sidebar h3, .design-archives h3, .zen-resources h3 {
+  font-family: 'Playfair Display', serif;
+  background-image:url("https://images.unsplash.com/photo-1611242320536-f12d3541249b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHJlZCUyMHNhdGlufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  -webkit-background-clip:text;
+  -moz-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  opacity: .9;
+  text-transform: uppercase;
+}
+
+.design-selection ul,
+.design-archives ul,
+.zen-resources ul {
+  list-style-type: ol;
+  list-style-type: lower-roman;
+  line-height: 2;
+  font-family: 'EB Garamond', serif;
+  max-width: 99%;
+  font-weight: bold;
+  font-style: italic;
+  opacity:0.9;
+}
+
+ul a,
+.preamble a,
+.explanation a,
+.participation a,
+.benefits a,
+.requirements a {
+  text-decoration: none;
+  color: black!important;
+  opacity:0.9;
+}
+
+ul a:hover {
+  color: black;
+  opacity:0.9;
+}
+
+/* Terri Code */
+
+.participation {
+  transform: rotate(15deg);
+  margin-top: -1em;
+}
+
+.explanation {
+  transform: rotate(30deg);
+  margin-top: -3em
+}
+
+.explanation:hover, .participation:hover, .benefits:hover {
+  transform: translate(10%, -70%) scale(1.2, 1.2);
+  transition: all 1s;
+  z-index: 5;
+}

@@ -1,0 +1,103 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: 1px solid grey;
+  height: 56vw;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.card-front {
+  padding: 0.5em;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  text-align: center;
+  font-size: 4vw;
+}
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 12.5% repeat(3, 25%) 12.5%;
+  grid-row-gap: 17%;
+  grid-template-areas: "number1 pip1 pip2 pip3 ." ". pip4 pip5 pip6 ." ". pip7 pip8 pip9 ." ". pip10 pip11 pip12 number2";
+}
+
+div {
+  align-items: center;
+  justify-items: center;
+}
+
+.number2 {
+  grid-row-end: number2;
+  grid-column-end: number2;
+}
+
+.pip1 {
+  grid-area: pip1;
+}
+
+.pip2 {
+  grid-area: pip2;
+}
+
+.pip3 {
+  grid-area: pip3;
+}
+
+.pip4 {
+  grid-area: pip4;
+}
+
+.pip5 {
+  grid-area: pip5;
+}
+
+.pip6 {
+  grid-area: pip6;
+}
+
+.pip7 {
+  grid-area: pip7;
+}
+
+.pip8 {
+  grid-area: pip8;
+}
+
+.pip9 {
+  grid-area: pip9;
+}
+
+.pip10 {
+  grid-area: pip10;
+}
+
+.pip11 {
+  grid-area: pip11;
+}
+
+.pip12 {
+  grid-area: pip12;
+}
