@@ -37,7 +37,7 @@
   transform: rotate(180deg);
 }
 
-@supports not (display: grid) {
+@supports (display: grid) {
 
 .row {
   display: grid;
@@ -106,7 +106,7 @@ div {
 
 }
 
-@supports (display: grid) {
+@supports not (display: grid) {
 
   .row {
     display: flex;

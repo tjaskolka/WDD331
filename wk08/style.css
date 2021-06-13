@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet');
 
+
+
 /* BASE */
 
 :root {
@@ -32,18 +34,33 @@ body {
   background-size: 260% auto;
   padding: 20px;
 }
+
 .page-wrapper {
   width: 20em;
   margin: 0 auto;
 }
 
+@media (min-width: 50em) {
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements,
+.design-selection,
+.design-archives{
+  height: calc(375px * 1.5);
+  width: calc(275px * 1.5);
+  font-size: 1.2rem;
+  }
+
 /* SECTION - header */
 
 h1 {
   font-family: var(--heading-font);
-  color: var(--paper3-color);
+  color: var( #bca05e);
   font-size: 2.5em;
 }
+
 h2 {
   font-family: var(--book-font);
   color: var(--paper1-color);
@@ -68,16 +85,15 @@ h2 {
 .participation,
 .benefits,
 .requirements {
-  height: 375px;
-  width: 275px;
-  background-image: radial-gradient(var(--paper1-color), var(--paper1-color), var(--paper2-color));
-  border-radius: 3px;
+  background-image: url("https://gdurl.com/0Dum");
+  background-image: url("https://gdurl.com/0Dum");
+  background-size: 100% 100%;
+  border-radius: 20px;
   box-shadow: 1px 1px 3.5px var(--primary-color);
   padding: 20px;
   box-sizing: border-box;
   margin-top: 6em;
   overflow: hidden;
-  border-radius: 20px;
 }
 .preamble {
   margin-left: 3em;
@@ -94,7 +110,6 @@ h2 {
 .main p,
 .design-selection p,
 .design-archives li,
-.design-selection li,
 .zen-resources li {
   font-size: .7em;
   padding-bottom: .4em;
@@ -109,9 +124,8 @@ h2 {
 .explanation {
   margin-top: -16.3em;
   margin-left: 5.5em;
-  background-color: var(--accent1-color);
-  background-image: none;
 }
+  
 .participation {
   margin-top: -22.5em;
   margin-left: 0em;
@@ -126,8 +140,6 @@ h2 {
   position: absolute;
   margin-top: -12.8em;
   margin-left: -.8em;
-  background-color: var(--accent1-color);
-  background-image: none;
 }
 
 footer {
@@ -159,8 +171,6 @@ footer a {
 
 .design-selection,
 .design-archives {
-  height: 375px;
-  width: 275px;
   background-image: url("https://gdurl.com/0Dum");
   background-size: 100% 100%;
   border-radius: 20px;
@@ -196,6 +206,9 @@ footer a {
   height: 25em;
   width: 17em;
 }
+
+
+
 
 @media all and (min-width: 800px) {
   body {
@@ -237,7 +250,19 @@ footer a {
   .preamble {
     overflow: visible;
   }
-  
+/*  .preamble:before {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 220px;
+    background-image: radial-gradient(var(--paper1-color), var(--paper1-color), var(--paper2-color));
+    border-radius: 3px;
+    box-shadow: 1px 1px 3.5px var(--primary-color);
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: -13.9em;
+  }*/
   .summary :nth-child(2) {
     position: absolute;
     right: 6em;
@@ -314,6 +339,10 @@ footer a {
   -webkit-text-fill-color: transparent;
   opacity: .9;
   text-transform: uppercase;
+}
+  
+  .benefits h3 {
+    text-align: right;
 }
 
 .preamble p,
