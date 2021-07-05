@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition effect</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <p>Mouse over <a href="http://sitepoint.com">this link</a> to see the transition effect.</p>
+    <button class="wiggle">Button</button>
+    <h1>Please select your favorite color of the ones shown below:</h1>
+    <form>
+        <ul>
+            <li class="red"><input type="radio" name="favecolor" id="red"><label for="red">Red</label></li>
+            <li class="yellow"><input type="radio" name="favecolor" id="yellow"><label for="yellow">Yellow</label></li>
+            <li class="blue"><input type="radio" name="favecolor" id="blue"><label for="blue">Blue</label></li>
+        </ul>
+        <div id="thanks" hidden>Thank you for selecting your favorite color.</div>
+        <button type="reset" class="pulse wiggle">Reset</button>
+    </form>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', () => document.body.classList.toggle('change'));
+
+        const changeHandler = () => {
+            const notfave = document.querySelectorAll('input:not(:checked)');
+            notfave.forEach( (item) => item.parentNode.classList.add('fade'));
+        };
+
+        const form = document.querySelector('form');
+        form.addEventListener('change', changeHandler);
+
+        const transitionendHandler = (domEvent) => {
+            domEvent.target.setAttribute('hidden', '');
+            document.getElementById('thanks').removeAttribute('hidden');
+        };
+
+        document.addEventListener('transitionend', transitionendHandler);
+
+
+    </script>
+</body>
+</html>

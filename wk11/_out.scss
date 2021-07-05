@@ -1,0 +1,19 @@
+@keyframes first {
+    0% {top: 10px;}
+    50% {top: 0px; transform: scale(1);}
+    90% {transform: scale(.5) rotate(0deg);}
+    100% {top: 0px; transform: scale(1) rotate(-45deg);}
+  }
+  
+  @keyframes last {
+    0% {bottom: 10px;}
+    30% {bottom: 0px; transform: scale(1);}
+    85% {transform: scale(.5) rotate(0deg);}
+    100% { bottom: 0px; transform: scale(1) rotate(45deg);}
+  }
+  
+  @keyframes middle {
+    0% {background-color: #333;}
+    100% {background-color: transparent;}
+  }
+  

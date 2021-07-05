@@ -1161,9 +1161,163 @@ figcaption .icon-angle-right {
   font-weight: 700;
 }
 
-.resources {
+.resources, .dates {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "title title title title title" "";
+  background-color: #b4b3b5;
+  row-gap: 1px;
+}
+
+.resources {
+  border: 1px solid #b4b3b5;
+}
+
+.resources div {
+  background-color: #eaeaea;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #0076b6;
+}
+
+.news {
+  padding: 10px 0;
+  margin-top: 25px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.resources .title, .dates .title {
+  font-size: 22px;
+  color: #ffffff;
+  background-color: #727272;
+}
+
+.dates {
+      grid-template-areas: "title title title" "date dash event";
+  border-bottom: 1px solid #b4b3b5;
+}
+
+.dates .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  background-color: #0076b6;
+}
+
+.dates div {
+  background-color: #ffffff;
+  padding: 10px 15px;
+}
+
+.resource-date, .dash, .event, .callout p {
+  font-size: small;
+}
+
+.resource-date, .news-date {
+  font-weight: 700;
+}
+
+.news-date .summary {
+  padding-bottom: 15px;
+}
+
+.news-date {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  padding-top: 22px;
+}
+
+.news-title, .callout h3 {
+  font-size: 17px;
+  padding: 10px 0;
+  color: #0076b6;
+  margin: 0;
+}
+
+.summary {
+  font-family: "Palatino Linotype", Palatino, serif;
+  font-size: 17px;
+  font-weight: light;
+  margin: 0 0 10px;
+  padding-bottom: 25px;
+}
+
+button.newsroom {
+  float: right;
+}
+
+article {
+  border-top: 1px solid #b4b3b5;
+}
+
+article img {
+  display: none;
+}
+
+.callout {
+  border: 1px solid #b4b3b5;
+  border-radius: 5px;
+}
+
+.callout img {
+  border-radius: 5px 5px 0 0;
+}
+
+.callout h3, .callout p, .callout button {
+  margin: 0 15px 15px;
+}
+
+footer {
+  height: 150px;
+  background: url(https://www.byui.edu/prebuilt/stylenew/images/foot/taylor_graphic_fixed.png) no-repeat center;
+}
+
+.callout img {
+  border-radius: 5px 5px 0 0;
+}
+
+@media screen and (min-width: 765px) {
+  .header-sub {
+    font-size: 28px;
+    border: none;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2.05fr .95fr;
+        grid-template-columns: 2.05fr .95fr;
+        grid-template-areas: "content side-info" "news callout";
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+    padding: 0 20px;
+    max-width: 860px;
+    margin: 30px auto 0;
+  }
+  .triplepix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .side-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .callout {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

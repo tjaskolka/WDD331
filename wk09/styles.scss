@@ -12,7 +12,7 @@ $byui-blue: #056cb6;
 $white: #ffffff;
 
 //fonts
-$small: 12px;
+$small: 14px;
 $large: 22px;
 $xl: 26px;
 $xxl: 30px;
@@ -136,7 +136,6 @@ button {
 
 .pix {
   border: 1px solid $med-gray;
-
 }
 
 figure {
@@ -166,9 +165,152 @@ figcaption {
   @extend %icon-style;
 }
 
-.resources {
+.resources, .dates {
   display: grid;
+  background-color: $med-gray;
+  row-gap: 1px;
+}
+
+.resources {
+  border: 1px solid $med-gray;
+}
+
+.resources div {
+  background-color: $light-gray;
+  padding: 10px 15px;
+  font-size: 16px;
+  color:#0076b6;
+}
+
+.news {
+  padding: 10px 0;
+  margin-top: 25px;
+  display: grid;
+}
+
+.resources .title, .dates .title {
+  font-size: $large;
+  color: #ffffff;
+  background-color: $dark-gray;
+}
+
+.dates {
   grid-template-areas: 
-    "title title title title title"
-    "";
+  "title title title"
+  "date dash event";
+  border-bottom: 1px solid $med-gray;
+}
+
+.dates .title {
+  grid-area: title;
+  background-color: $link-blue;
+}
+
+.dates div {
+  background-color: #ffffff;
+  padding: 10px 15px;
+}
+
+.resource-date, .dash, .event, .callout p {
+  font-size: small;
+}
+
+.resource-date, .news-date {
+  font-weight: 700;
+}
+
+.news-date .summary {
+  padding-bottom: 15px;
+}
+
+.news-date {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  padding-top: $large;
+}
+
+.news-title, .callout h3  {
+  font-size: 17px;
+  padding: 10px 0;
+  color:#0076b6;
+  margin: 0;
+}
+
+.summary {
+  font-family: "Palatino Linotype", Palatino, serif;
+  font-size: 17px;
+  font-weight: light;
+  margin: 0 0 10px;
+  padding-bottom: 25px;
+}
+
+button.newsroom {
+  float: right;
+}
+
+article {
+  border-top: 1px solid $med-gray;
+}
+
+article img {
+  display: none;
+}
+
+.callout {
+  border: 1px solid $med-gray;
+  border-radius: 5px;
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+  h3, p, button {
+    margin: 0 15px 15px;
+  }
+}
+
+footer {
+  height: 150px;
+  background: url(https://www.byui.edu/prebuilt/stylenew/images/foot/taylor_graphic_fixed.png) no-repeat center;
+}
+
+.callout img {
+  border-radius: 5px 5px 0 0;
+}
+
+@media screen and (min-width:765px) {
+  
+.header-sub {
+  font-size: 28px;
+  border: none;
+  
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2.05fr .95fr;
+  grid-template-areas: 
+  "content side-info"
+  "news callout";
+  column-gap: 25px;
+  padding: 0 20px;
+  max-width: 860px;
+  margin: 30px auto 0;
+}
+
+.triplepix {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.side-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.callout {
+  height: fit-content;
+}
+
 }

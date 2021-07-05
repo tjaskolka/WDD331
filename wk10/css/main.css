@@ -1,0 +1,79 @@
+a {
+    transition: 1s;
+}
+
+a:link {
+    color: #309;
+}
+
+a:hover {
+    color: #f0c;
+}
+
+body {
+    background: #f0f;
+    transition: 5s steps(5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.change {
+    background: #0cf;
+}
+
+li {
+    transition: 500ms;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.red {
+    background-color: red;
+    font-size: large;
+}
+
+.blue {
+    background-color: blue;
+    font-size: large;
+}
+
+.yellow {
+    background-color: yellow;
+    font-size: large;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.5);
+        opacity: .8;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 500ms infinite alternate-reverse;
+}
+
+@keyframes wiggle {
+    20% {
+        transform: scale(.5) skewX(-5deg) rotate(-5deg);
+    }
+    49% {
+        transform: skewY(5deg) rotate(5deg);
+    }
+    68% {
+        transform: skewX(-5deg) rotate(-5deg) scale(1.5);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.wiggle {
+    animation-name: wiggle;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
